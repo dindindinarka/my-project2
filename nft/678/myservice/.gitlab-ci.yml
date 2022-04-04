@@ -1,0 +1,20 @@
+include:
+  - project: 'perf-core/perf-ci-template'
+    ref: 4.6.0
+    file: '/templates/.gatling-docker-gun-template.yml'
+
+variables:
+  baseUrl: "https://test.tcsbank.ru"
+
+DebugTest:
+  extends: .DebugTest
+  variables:
+    LAUNCH_SCRIPT: "Gatling / testOnly name [myservice]: test.myservice.Debug"
+
+Stability:
+  extends: .RegressTest
+  variables:
+    LAUNCH_SCRIPT: "Gatling / testOnly name [myservice]: test.myservice.Stability"
+    intensity: "10"
+    rampDuration: "5 minutes"
+    stageDuration: "30 minutes"

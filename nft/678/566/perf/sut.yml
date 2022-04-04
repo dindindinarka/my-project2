@@ -1,0 +1,52 @@
+---
+# Вставляется из заявки.
+# Указываются аппаратные характеристики тестового и продуктивного контура
+# yamllint disable rule:line-length
+# Не указывайте "лишних" столбцов, которые по итогу будут пустовать
+# Ключи характеристик, которые вы хотите сравнить должны быть с именем First и Second
+
+sut:
+  -
+    instance:
+      name: "host1"
+      parameters:
+        -
+          ColumnNames:
+            First: "Prod"
+            Second: "Test"
+        -
+          Name: "urls"
+          First: "http://grafg-lite?orgId"
+          Second: "http://ting-lit"
+        -
+          Name: "CPU core"
+          First: "10"
+          Second: "15"
+        -
+          Name: "MemTotal Gb"
+          First: "10"
+          Second: "10"
+        -
+          Name: "HDD, Gb"
+          First: "15"
+          Second: "10"
+        -
+          Name: "Дополнительная информация"
+          First: "ссылка на шаблон"
+          Second: "разница х4"
+  -
+    instance:
+      name: "host2"
+      parameters:
+        -
+          ColumnNames:
+            First: "Prod"
+        -
+          Name: "urls"
+          First: "http://grafg-lite?orgId"
+        -
+          Name: "CPU"
+          First: "10"
+        -
+          Name: "RAM"
+          First: "10"

@@ -1,0 +1,5 @@
+merge_request:
+  method: fast-forward
+push_rules:
+  branch_name: "^(feature|bugfix|support)\\/[a-zA-Z0-9\\-\\_]+$|^(release|hotfix)\\/v\\d+\\.\\d+\\.(\\d+|x)$|^master|^revert-.*$"
+  commit_message: "^(feat|fix|chore|refactor|style|test|docs|ci|build|perf)(\\(\\w+\\))?\\: (.|[\\n])+"

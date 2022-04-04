@@ -1,0 +1,19 @@
+---
+# Вставляется из заявки.
+# - Логи: Slunk, Kibana, GrayLog
+# - Метрики: Grafana и др.
+# yamllint disable rule:line-length
+
+monitoring:
+  -
+    instance:
+      name: "Grafana аппаратные метрики"
+      urls:
+        Prod: "http://grafg-lite?orgId"
+        Test: "http://ting-lite"
+  -
+    instance:
+      name: Logs
+      urls:
+        Prod: "http://grafg-lite?orgId222"
+        Test: "http://ting-lite22222"

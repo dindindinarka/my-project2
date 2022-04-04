@@ -1,0 +1,15 @@
+owners:
+  count: 1
+  files:
+    - approvers.yml
+    - policy.yml
+  target_branch: master
+  users:
+    - i.akhaltsev@tinkoff.ru
+    - m.rogozhnikov@tinkoff.ru
+
+default:
+  count: 1
+  target_branch: master
+  groups:
+    - performance-team

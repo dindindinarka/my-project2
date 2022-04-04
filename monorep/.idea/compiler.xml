@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
+        </processorPath>
+        <module name="invest-accounting-main.ixxi-db-tests.test" />
+        <module name="invest-accounting-main.tap-tax-tests.main" />
+        <module name="invest-accounting-main.test" />
+        <module name="invest-accounting-main.core.test" />
+        <module name="invest-accounting-main.tap-tax-tests.test" />
+        <module name="invest-accounting-main.main" />
+        <module name="invest-accounting-main.ixxi-services-tests.test" />
+        <module name="invest-accounting-main.ixxi-db-tests.main" />
+        <module name="invest-accounting-main.core.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.3.3.RELEASE/f8b44f9409b969d4320ce1caff727bd5b85e513e/spring-boot-configuration-processor-2.3.3.RELEASE.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
+        </processorPath>
+        <module name="invest-accounting-main.ixxi-services-tests.main" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
