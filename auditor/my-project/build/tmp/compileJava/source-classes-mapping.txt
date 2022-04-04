@@ -1,16 +1,16 @@
-FileExists.java
- FileExists
-Data.java
- Data
-ModifyText.java
- ModifyText
-GenerateFile.java
- GenerateFile
-ModifyFileText.java
- ModifyFileText
-ReaderFile.java
- ReaderFile
-WriterInFile.java
- WriterInFile
-MyHashMap.java
- MyHashMap
+File/ModifyText.java
+ File.ModifyText
+File/WriterInFile.java
+ File.WriterInFile
+File/GenerateFile.java
+ File.GenerateFile
+File/FileExists.java
+ File.FileExists
+File/ReaderFile.java
+ File.ReaderFile
+File/ModifyFileText.java
+ File.ModifyFileText
+MyHaspMap/Data.java
+ MyHaspMap.Data
+MyHaspMap/MyHashMap.java
+ MyHaspMap.MyHashMap

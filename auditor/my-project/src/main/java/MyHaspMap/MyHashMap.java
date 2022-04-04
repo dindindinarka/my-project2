@@ -1,12 +1,12 @@
+package MyHaspMap;
 
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class MyHashMap {
 
 
     private static MyHashMap myHashMap = new MyHashMap();
-    private static int currentSize = 4;
+    private static int currentSize = 32;
     private static int newSize = currentSize * 2;
     private static ArrayList<Data> myMap = new ArrayList<>(currentSize);
 
@@ -14,13 +14,6 @@ public class MyHashMap {
     public static void main(String args[]) {
 
         myMap = myHashMap.create();
-
-        myHashMap.put("test", "test");
-        myHashMap.put("test1", "test2");
-        myHashMap.put("test2", "test");
-        myHashMap.put("test2", "test2");
-        myHashMap.put("test2", "test");
-        myHashMap.put("test2", "test2");
 
         Data data2 = new Data("test2", "test");
         System.out.println(myHashMap.get(data2));//проверка вхождения элемента
@@ -35,35 +28,33 @@ public class MyHashMap {
         return myMap;
     }
 
-    public void put(String dataKey, String dataValue) {
-        Data data1 = new Data(dataKey, dataValue);
-
+    public void put(Data data) {
         if ((myHashMap.getSize()) < currentSize * 0.8) {//если массив не заполнен на 80%
-            int h = myHashMap.hashCode(data1) % currentSize / 4;
+            int h = myHashMap.hashCode(data) % currentSize / 4;
             if (myMap.get(h).dataKey == null) {
-                myMap.set(h, data1);
+                myMap.set(h, data);
             } else {
                 for (int i = h; i < currentSize; i++) {
                     if (myMap.get(i).dataKey == null) {
-                        myMap.set(i, data1);
+                        myMap.set(i, data);
                         break;
                     }
                 }
             }
         } else {
-            ArrayList<Data> newList = new ArrayList<>(newSize);//создаем новый массив
-            for (int i = 0; i < newSize; i++) newList.add(new Data(null, null));//инициализируем значениямм
+            ArrayList<Data> newMyMap = new ArrayList<>(newSize);//создаем новый массив
+            for (int i = 0; i < newSize; i++) newMyMap.add(new Data(null, null));//инициализируем значениямм
             for (int i = 0; i < myMap.size(); i++) {//переносим в него значения из старого массива
-                newList.add(myMap.get(i));
+                newMyMap.add(myMap.get(i));
             }
-            myMap = newList;//переприсваиваем значение переменной
-            int h = myHashMap.hashCode(data1) % newSize / 4;//вычисляем хэшкод
+            myMap = newMyMap;//переприсваиваем значение переменной
+            int h = myHashMap.hashCode(data) % newSize / 4;//вычисляем хэшкод
             if (myMap.get(h).dataKey == null) {//если ячейка с таким хешкодом пуста - заполняем
-                myMap.set(h, data1);
+                myMap.set(h, data);
             } else {//если ячейка с таким хешкодом занята - ищем ближайшую свободную
                 for (int j = h; j < newSize; j++) {
                     if (myMap.get(j).dataKey == null) {
-                        myMap.set(j, data1);
+                        myMap.set(j, data);
                         System.out.println(myMap.get(j).dataKey);
                         break;
                     }
@@ -74,22 +65,22 @@ public class MyHashMap {
     }
 
     public boolean get(Data data) {
-        boolean b = false;
-        for (Data string : myMap) {
-            if (string.dataKey != null) {
-                if ((string.dateValue.equals(data.dateValue)) && (string.dataKey.equals(data.dataKey))) {
-                    b = true;
+        boolean checkEqual = false;
+        for (Data d : myMap) {
+            if (d.dataKey != null) {
+                if ((d.dateValue.equals(data.dateValue)) && (d.dataKey.equals(data.dataKey))) {
+                    checkEqual = true;
                     break;
-                } else b = false;
+                } else checkEqual = false;
             }
         }
-        return b;
+        return checkEqual;
     }
 
     public int getSize() {
         int size = 0;
-        for (Data string : myMap) {
-            if (string.dataKey != null) size++;
+        for (Data d : myMap) {
+            if (d.dataKey != null) size++;
         }
         return size;
     }

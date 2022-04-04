@@ -1,6 +1,6 @@
+package File;
+
 import java.io.*;
-import java.util.Random;
-import java.util.Scanner;
 
 
 public class ModifyFileText {
