@@ -10,31 +10,24 @@ public class MyHashMap {
     private static int newSize = currentSize * 2;
     private static ArrayList<Data> myMap = new ArrayList<>(currentSize);
 
-
-    public static void main(String args[]) {
-
-        myMap = myHashMap.create();
-
-        Data data2 = new Data("test2", "test");
-        System.out.println(myHashMap.get(data2));//проверка вхождения элемента
-
-        System.out.println(myHashMap.getSize());//вычисление размера мапы
-
-    }
-
     public ArrayList<Data> create() {
         myMap = new ArrayList(currentSize);
         for (int i = 0; i < currentSize; i++) myMap.add(new Data(null, null));
         return myMap;
     }
 
+    public int findIndexInArray(Data data) {
+        int h = myHashMap.hashCode(data) % currentSize / 4;
+        return h;
+    }
+
     public void put(Data data) {
         if ((myHashMap.getSize()) < currentSize * 0.8) {//если массив не заполнен на 80%
-            int h = myHashMap.hashCode(data) % currentSize / 4;
-            if (myMap.get(h).dataKey == null) {
-                myMap.set(h, data);
+            var index = findIndexInArray(data);
+            if (myMap.get(index).dataKey == null) {
+                myMap.set(index, data);
             } else {
-                for (int i = h; i < currentSize; i++) {
+                for (int i = index; i < currentSize; i++) {
                     if (myMap.get(i).dataKey == null) {
                         myMap.set(i, data);
                         break;
