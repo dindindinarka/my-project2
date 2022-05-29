@@ -1,7 +1,6 @@
-package File;
+package file;
 
 import java.io.File;
-import java.io.IOException;
 
 
 public class FileExists {

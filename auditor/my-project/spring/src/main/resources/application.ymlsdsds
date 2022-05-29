@@ -1,0 +1,19 @@
+# Прочитай README.md
+spring:
+  application:
+    name: ixxi-services-test
+  main:
+    banner-mode: OFF
+    lazy-initialization: true
+app:
+  datasource:
+    ia:
+      url: jdbc:postgresql://localhost:5432/testdb
+      username: test
+      password: test
+      driver-class-name: org.postgresql.Driver
+      database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+      matching-strategy: ant_path_matcher
+      configuration:
+        minimum-idle: 0
+        maximum-pool-size: 1

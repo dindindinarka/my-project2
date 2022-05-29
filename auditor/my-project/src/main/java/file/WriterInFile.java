@@ -1,7 +1,6 @@
-package File;
+package file;
 
 import java.io.*;
-import java.util.Scanner;
 
 
 public class WriterInFile {

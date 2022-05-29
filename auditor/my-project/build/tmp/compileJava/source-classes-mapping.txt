@@ -4,6 +4,8 @@ File/WriterInFile.java
  File.WriterInFile
 File/GenerateFile.java
  File.GenerateFile
+Main.java
+ Main
 File/FileExists.java
  File.FileExists
 File/ReaderFile.java

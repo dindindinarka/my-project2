@@ -1,7 +1,4 @@
-package MyHaspMap;
-
-import java.util.HashMap;
-import java.util.Map;
+package myHaspMap;
 
 public class Data {
 
