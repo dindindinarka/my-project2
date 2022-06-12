@@ -1,7 +1,5 @@
 CREATE TYPE status_enum AS ENUM('DRAFT', 'SENT');
- 
- 
- 
+
 CREATE TABLE documents
 (
     id bigint PRIMARY KEY,

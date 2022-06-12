@@ -16,7 +16,6 @@ public class DocumentsController {
 
     private final DocumentsService documentsService;
 
-
     @PutMapping()
     public ResponseEntity<List<String>> delete(
             @RequestParam String userName,
