@@ -1,9 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import profile.ProfileCustomInterface;
 
 public class Main {
-    public static void main(String[] args) {
-        List myArray = new ArrayList<String>(32);
-        System.out.println("1");
-    }
+        public static void main (String[] args) {
+            var context = new ClassPathXmlApplicationContext("applicationContext.xml");
+            context.getBean(ProfileCustomInterface.class).printMess();
+        }
 }

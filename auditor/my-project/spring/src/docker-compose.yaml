@@ -1,12 +1,12 @@
-version: "3.9"
+volumes:
+  data:
+
 services:
   postgres:
-    image: postgres:13.3
+    image: postgres:latest
     environment:
-      POSTGRES_DB: "testdb"
-      POSTGRES_USER: "test"
-      POSTGRES_PASSWORD: "test"
-    volumes:
-      - .:/docker-entrypoint-initdb.d
+      - POSTGRES_PASSWORD=postgrespw
     ports:
-      - "5432:5432"
+      - 49153:49153
+    volumes:
+      - data:/var/lib/postgresql

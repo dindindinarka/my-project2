@@ -14,7 +14,7 @@ class MyHashMapTest {
         var myMap = createMyHaspMap();
 
         for (int i = 0; i < 7; i++) {
-            var data = new Data("test" + i, "test" + i);
+            var data = new Data("listNode" + i, "listNode" + i);
             myMap.put(data);
         }
 
@@ -30,7 +30,7 @@ class MyHashMapTest {
         var data = new Data("test234", "test234");
 
         for (int i = 0; i < 24; i++) {
-            var d = new Data("test" + i, "test" + i);
+            var d = new Data("listNode" + i, "listNode" + i);
             myMap.put(d);
         }
         myMap.put(data);
@@ -51,7 +51,7 @@ class MyHashMapTest {
         var data3 = new Data("test236", "test239");
 
         for (int i = 0; i < 32; i++) {
-            var d = new Data("test" + i, "test" + i);
+            var d = new Data("listNode" + i, "listNode" + i);
             myHashMap.put(d);
         }
         assertAll(
@@ -82,7 +82,7 @@ class MyHashMapTest {
         var data = new Data("test2", "test2");
 
         for (int i = 0; i < 24; i++) {
-            var d = new Data("test" + i, "test" + i);
+            var d = new Data("listNode" + i, "listNode" + i);
             myHashMap.put(d);
         }
         assertAll(
@@ -117,7 +117,7 @@ class MyHashMapTest {
         var data1 = new Data("656543fcgfcf33", "test2");
 
         for (int i = 0; i < 32; i++) {
-            var d = new Data("test" + i, "test" + i);
+            var d = new Data("listNode" + i, "listNode" + i);
             myHashMap.put(d);
 
         }

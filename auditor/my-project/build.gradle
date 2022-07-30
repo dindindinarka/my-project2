@@ -1,6 +1,10 @@
 plugins {
     id 'java'
     id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.0"
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.springframework.boot' version '2.6.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'application'
 }
 
 
@@ -8,6 +12,11 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+
+javafx {
+    version = "14.0.1"
+    modules = [ 'javafx.controls' ]
+}
 repositories {
     mavenCentral()
 }
@@ -16,6 +25,19 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    compileOnly 'org.hibernate:hibernate-core:5.2.1.Final'
+    implementation 'org.postgresql:postgresql:42.2.20'
+    implementation 'io.swagger.core.v3:swagger-annotations:2.1.6'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
 }
 
 test {

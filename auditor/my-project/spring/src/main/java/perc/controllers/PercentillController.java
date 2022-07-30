@@ -7,9 +7,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
-@RequestMapping(path = "")
+@RequestMapping(path = "/{userName}")
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
@@ -18,7 +19,7 @@ public class PercentillController {
     private final PersentillService persentillService;
 
     @PostMapping()
-    public ResponseEntity<TempOfLocationEntity> acceptMeasurement(
+    public ResponseEntity<HashMap<Integer, Integer>> acceptMeasurement(
             @RequestParam int locationId,
             @RequestParam int temperature) {
         return ResponseEntity.ok(persentillService.create(locationId, temperature));
@@ -26,13 +27,9 @@ public class PercentillController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<Pair<String, Integer>>> getTemperatureStatistics()
-            {
-        return ResponseEntity.ok(persentillService.getPercentill());
+    public ResponseEntity<List<Pair<Integer, Integer>>> getTemperatureStatistics() {
+        return ResponseEntity.ok(persentillService.convertToPair(persentillService.getPercentill()));
 
     }
-
-
-
 
 }

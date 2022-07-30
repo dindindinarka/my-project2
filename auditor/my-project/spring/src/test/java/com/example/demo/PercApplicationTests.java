@@ -23,8 +23,17 @@ class PercApplicationTests {
 
 		Random gen = new Random();
 		for(int i = 0; i < 100; i++) {
-			persentillService.create(1, gen.nextInt(100));
+			persentillService.create(8, 1);
 		}
+		persentillService.create(8, 100);
+
+		for(int i = 0; i < 99; i++) {
+			persentillService.create(9, 1);
+		}
+		persentillService.create(9, 100);
+		persentillService.create(9, 100);
 	}
+
+
 
 }

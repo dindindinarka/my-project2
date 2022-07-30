@@ -2,9 +2,8 @@ package perc.entities;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 
 @Data
@@ -13,8 +12,12 @@ import javax.persistence.Table;
 public class TempOfLocationEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @NotNull
+    private int id;
     private int temperature;
     private int locationid;
+    private int counttemp;
 
 
 

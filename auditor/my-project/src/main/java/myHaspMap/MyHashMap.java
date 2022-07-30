@@ -1,7 +1,10 @@
 package myHaspMap;
 
+import profile.ProfileCustom;
+
 import java.util.*;
 
+@ProfileCustom
 public class MyHashMap {
 
     int size;
