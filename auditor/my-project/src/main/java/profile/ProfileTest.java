@@ -18,7 +18,8 @@ public class ProfileTest implements ProfileCustomInterface {
 
     @Override
     public void printMess() {
-        System.out.println(message);
+        var mess2 = message.replace("метод", "функция");
+        System.out.println(mess2);
 
     }
 }

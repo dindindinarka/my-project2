@@ -38,6 +38,8 @@ dependencies {
     implementation 'org.postgresql:postgresql:42.2.20'
     implementation 'io.swagger.core.v3:swagger-annotations:2.1.6'
     implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+    implementation 'com.vladmihalcea:hibernate-types-52:2.14.0'
 }
 
 test {
